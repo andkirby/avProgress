@@ -1,0 +1,29 @@
+.box {
+    border: 1px solid #999999;
+    padding: 20px;
+}
+
+.box_1 {
+    background-color: white;
+    color: #222;
+}
+
+.box_2 {
+    background-color: #d19e90;
+    color: #222;
+}
+
+.box_3 {
+    background-color: #222222;
+    color: #ddd;
+}
+
+.avProgressColor_14542A .avProgressOverlayLoader {
+    background-image: url("AjaxLoader_14542A.gif");
+    border-color: #14542A;
+}
+
+.avProgressColor_white .avProgressOverlayLoader {
+    background-image: url("AjaxLoader_white.gif");
+    border-color: #EBEBEB;
+}

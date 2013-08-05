@@ -1,0 +1,19 @@
+.avProgressBox {position: relative;}
+.avProgressBox > .avProgressOverlay {
+    position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: block; opacity: 0.8;
+    background: white;
+}
+.avProgressDisabled > .avProgressOverlayLoader {display: none;}
+.avProgressOverlayLoader {
+    background: url("AjaxLoaderGrey.gif") no-repeat center #555;
+    border: 3px solid #444;
+    width: 24px;
+    height: 24px;
+    margin-left: -15px;
+    margin-top: -15px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    display: block;
+    opacity: 1;
+}

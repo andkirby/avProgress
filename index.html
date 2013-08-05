@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Av Progress Box</title>
+    <!--<link rel="stylesheet" href="reset.css" />-->
+    <link rel="stylesheet" href="other/960_12_col.css" />
+    <link rel="stylesheet" href="avProgress/avProgress.css" />
+    <link rel="stylesheet" href="other/style.css" />
+    <script type="text/javascript" src="other/jquery-dev.js"></script>
+    <script type="text/javascript" src="avProgress/avProgress.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+    var $ = jQuery;
+</script>
+<div>
+    <div class="container_12">
+        <h1>Test Av Progress</h1>
+        <div id="b1" class="grid_3 box box_1" style="border: 1px solid cornflowerblue;">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+            <div>
+                <input type="button" value="Update me" />
+            </div>
+        </div>
+        <div id="b2" class="grid_3 box box_2" style="border: 1px solid brown;">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+            <div>
+                <input type="button" value="Update me" />
+            </div>
+        </div>
+        <div id="b3" class="grid_3 box box_3" style="border: 1px solid darkgreen;">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+            <div>
+                <input type="button" value="Update me" />
+            </div>
+        </div>
+        <input id="disable_button" type="button" value="Disable all" />
+    </div>
+</div>
+<script type="text/javascript">
+    var boxes = $('.box');
+    boxes.each(function () {
+        'use strict';
+        console.log(this);
+        var box = $(this), color = 'white';
+        if (box[0].id === 'b3') {
+            color = '#333';
+        } else if (box[0].id === 'b2') {
+            color = '#14542A';
+        }
+        box.avProgress({color: color});
+    });
+    boxes.find('input').click(function () {
+        'use strict';
+        var box = $(this).parent().parent();
+        box.avProgress(true);
+    });
+    $('#disable_button').click(function () {
+        $('.box').avProgress(false);
+    });
+</script>
+</body>
+</html>
